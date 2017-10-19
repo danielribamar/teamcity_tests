@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0" DefaultTargets="PublishDev">
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SolutionDir>$(MSBuildStartupDirectory)</SolutionDir>
+    <SolutionFilename>$(SolutionDir)\Web001.sln</SolutionFilename>
+    <WebProjectFileName>$(SolutionDir)\Web001\Web001.csproj</WebProjectFileName>
+    <PublishProfilePath>$(SolutionDir)\Web001\Properties\PublishProfiles\</PublishProfilePath>
+    <OutputPath>$(SolutionDir)\buildartifacts</OutputPath>
+  </PropertyGroup>
+
+
+	<Target Name="Clean">
+		<Message Importance="High" Text="TARGET ---> Clean" />
+		<RemoveDir Directories="@(OutputPath)" />
+		<MakeDir Directories="@(OutputPath)" />
+	</Target>
+
+  <Target Name="PublishDev" DependsOnTargets="Clean">
+
+    <Message Importance="High" Text="TARGET ---> PublishDev" />
+
+    <MSBuild Projects="$(WebProjectFileName)"
+             Properties="Configuration=$(Configuration);
+             SolutionDir=$(SolutionDir);
+             DeployProjA=true;
+             VisualStudioVersion=14.0;
+             PublishProfile=$(PublishProfilePath)buildArtifacts.pubxml;
+             IncludeSetAclProviderOnDestination=False;
+             AllowUntrustedCertificate=true;
+             UserName=WDeployAdmin;
+             Password=D71n5kr7gq67.M7md6AY7" />
+  </Target>
+  </Project>
+
+
+
