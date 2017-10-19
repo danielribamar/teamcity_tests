@@ -9,6 +9,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>C:\Users\daniel.martins\Desktop\teamcity_tests\Web001\bin\Release\PublishOutput</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Application.build">
+      <publishTime>10/19/2017 10:17:58</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>05/05/2017 09:59:26</publishTime>
     </File>
@@ -178,10 +181,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2015 03:04:30</publishTime>
     </File>
     <File Include="bin/Web001.dll">
-      <publishTime>10/19/2017 09:28:51</publishTime>
+      <publishTime>10/19/2017 10:19:45</publishTime>
     </File>
     <File Include="bin/Web001.pdb">
-      <publishTime>10/19/2017 09:28:51</publishTime>
+      <publishTime>10/19/2017 10:19:45</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>10/18/2017 14:06:19</publishTime>

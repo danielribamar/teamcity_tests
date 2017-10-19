@@ -7,7 +7,7 @@
     <SolutionFilename>$(SolutionDir)\Web001.sln</SolutionFilename>
     <WebProjectFileName>$(SolutionDir)\Web001\Web001.csproj</WebProjectFileName>
     <PublishProfilePath>$(SolutionDir)\Web001\Properties\PublishProfiles\</PublishProfilePath>
-    <OutputPath>$(SolutionDir)\bin\release\artifacts\</OutputPath>
+    <OutputPath>$(SolutionDir)\bin\Release\PublishOutput</OutputPath>
   </PropertyGroup>
 
 
@@ -19,14 +19,14 @@
 
   <Target Name="buildArtifacts" DependsOnTargets="Clean">
 
-    <Message Importance="High" Text="TARGET ---> PublishDev" />
+    <Message Importance="High" Text="TARGET ---> buildArtifacts" />
 
     <MSBuild Projects="$(WebProjectFileName)"
              Properties="Configuration=$(Configuration);
              SolutionDir=$(SolutionDir);
              DeployProjA=true;
-             VisualStudioVersion=14.0;
-             PublishProfile=$(PublishProfilePath)buildArtifacts.pubxml;
+             VisualStudioVersion=17.0;
+             PublishProfile=$(PublishProfilePath)pack.pubxml;
              IncludeSetAclProviderOnDestination=False;
              AllowUntrustedCertificate=true;
              UserName=WDeployAdmin;
