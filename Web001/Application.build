@@ -7,7 +7,7 @@
     <SolutionFilename>$(SolutionDir)\Web001.sln</SolutionFilename>
     <WebProjectFileName>$(SolutionDir)\Web001\Web001.csproj</WebProjectFileName>
     <PublishProfilePath>$(SolutionDir)\Web001\Properties\PublishProfiles\</PublishProfilePath>
-    <OutputPath>$(SolutionDir)\buildartifacts</OutputPath>
+    <OutputPath>$(SolutionDir)\bin\release\artifacts\</OutputPath>
   </PropertyGroup>
 
 
